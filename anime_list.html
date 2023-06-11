@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+      <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Bootstrap demo</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+            <style type="text/css">
+                  :root{
+                        --color-yellow : #E08910;
+                        --bg-blue-dark : #30333F;
+                        --bg-blue-black : #1F222A;
+                  }
+                  body{
+                        font-family: 'Quicksand', sans-serif;
+                        
+                  }
+                  .background-navbar-scroll{
+                        background: rgba(31, 34, 42, 0.5);
+                        backdrop-filter: blur(10px);
+                        transition: all ease 0.5s;
+                  }
+                  .watch-now:hover{
+                        color: white;
+                  }
+                  .content-slider::-webkit-scrollbar {
+                        width: 0 !important;
+                  }
+                  .content-slider {
+                        scroll-snap-type: x mandatory;
+      
+                  }
+                  .content-slider .slide{
+                        scroll-snap-align: start;
+                  }
+                  .show{
+                        display: block;
+                  }
+            </style>
+      </head>
+      <body>
+            <navbar class="fixed-top">
+                  <section id="section-nav">
+                        <div class="container">
+                              <div class="row">
+                                    <div class="col">
+                                          <nav class="navbar navbar-expand-lg py-3" id="nav-menu">
+                                                <div class="container-fluid">
+                                                  <a class="navbar-brand" href="#"><img src="./asset/AnimU.svg" width="100" alt=""></a>
+                                                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                  </button>
+                                                  <div class="collapse navbar-collapse d-lg-flex justify-content-lg-between" id="navbarSupportedContent">
+                                                      <ul class="navbar-nav mb-2 mb-lg-0 col-6 ms-0 ms-sm-0 ms-lg-3">
+                                                            <li class="nav-item me-3">
+                                                                  <a class="nav-link active text-white" aria-current="page" href="./home.html" style="font-weight: 600;font-size: 16px;">Home</a>
+                                                            </li>
+                                                            <li class="nav-item me-3">
+                                                                  <a class="nav-link text-white" href="./anime_list.html" style="font-weight: 600;font-size: 16px;">AnimeList</a>
+                                                            </li>
+                                                            <li class="nav-item me-3">
+                                                                  <a class="nav-link text-white" href="./genre.html" style="font-weight: 600;font-size: 16px;">Genre</a>
+                                                            </li>
+                                                            <li class="nav-item me-3">
+                                                                  <a class="nav-link text-white" href="./my_list.html" style="font-weight: 600;font-size: 16px;">My List</a>
+                                                            </li>
+                                                      </ul>
+                                                      <div class="col-5 d-flex justify-content-lg-end align-items-center gap-3">
+                                                            <div class="col-12 position-relative d-flex align-items-center">
+                                                                  <input class="form-control me-2 px-3" style="background: transparent;border-radius: 10px; border: 2px solid white;color: white;" type="search" aria-label="Search">
+                                                                  <span class="position-absolute end-0 translate-middle-x"><img src="./asset/search_logo.svg" alt=""></span>
+                                                            </div>
+                                                            <div class="">
+                                                                  <div class="dropdown">
+                                                                        <a class="text-white text-decoration-none col-2" id="dropdown-toogle" style="font-size: 25px;cursor: pointer;"><i class="bi bi-person-circle"></i></a>
+
+                                                                        <div class="position-absolute bg-white px-3 py-2 rounded" id="dropdown-menu" style="right:0; top: 50px;list-style: none;">
+                                                                              <li><a class="text-decoration-none text-dark mb-3" href="./profile.html">Profile</a></li>
+                                                                              <li><a class="text-decoration-none text-dark mb-3" href="./login.html">Logout</a></li>
+                                                                        </div>
+                                                                  </div>
+                                                            
+                                                            </div>
+                                                            
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                          </nav>
+                                    </div>
+                              </div>
+                        </div>
+                  </section>
+            </navbar>
+            <main class="pb-5" style="background: var(--bg-blue-dark);">
+                  <section>
+                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                          <div class="position-relative d-flex align-items-center">
+                                                <img src="./asset/image.svg" class="d-block w-100" alt="...">
+                                                <div class="d-none d-md-block position-absolute" style="width: 100%;margin-left: 10vw;">
+                                                      <p class="m-0 text-white" style="font-weight: 600;font-size: 24px;">Naruto</p>
+                                                      <div class="d-flex gap-3 my-3">
+                                                            <p class="m-0 text-white border border-outline-white rounded btn" style="font-weight: 600;font-size: 16px;">Action | Adventure</p>
+                                                            <p class="m-0 text-white border border-outline-white rounded btn" style="font-weight: 600;font-size: 16px;">2008</p> 
+                                                      </div>
+                                                      <p class="text-white" style="max-width: 75vw;">Movie Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare placerat erat ac convallis. Aenean lectus sapien, eleifend vitae eros eget, consectetur viverra sem. Morbi ullamcorper ornare vulputate. Vestibulum bibendum ultricies suscipit. Sed ac volutpat mauris. Vestibulum hendrerit dui vitae tristique auctor. Donec lobortis in neque eu vulputate. Aenean elementum.</p>
+                                                </div>
+                                          </div>            
+                                    </div>
+                                    <div class="carousel-item">
+                                          <div class="position-relative d-flex align-items-center">
+                                                <img src="./asset/image.svg" class="d-block w-100" alt="...">
+                                                <div class="d-none d-md-block position-absolute" style="width: 100%;margin-left: 10vw;">
+                                                      <p class="m-0 text-white" style="font-weight: 600;font-size: 24px;">Naruto</p>
+                                                      <div class="d-flex gap-3 my-3">
+                                                            <p class="m-0 text-white border border-outline-white rounded btn" style="font-weight: 600;font-size: 16px;">Action | Adventure</p>
+                                                            <p class="m-0 text-white border border-outline-white rounded btn" style="font-weight: 600;font-size: 16px;">2008</p> 
+                                                      </div>
+                                                      <p class="text-white" style="max-width: 75vw;">Movie Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare placerat erat ac convallis. Aenean lectus sapien, eleifend vitae eros eget, consectetur viverra sem. Morbi ullamcorper ornare vulputate. Vestibulum bibendum ultricies suscipit. Sed ac volutpat mauris. Vestibulum hendrerit dui vitae tristique auctor. Donec lobortis in neque eu vulputate. Aenean elementum.</p>
+                                                </div>
+                                          </div>            
+                                    </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                  </section>
+                  <section>
+                        <div class="container">
+                              <div class="row">
+                                    <div class="col-12">
+                                          <p class="text-white" style="font-weight: 700;font-size: 24px;">Continue to Watch</p>
+                                    </div>
+                                    <div class="col-12">
+                                          <div class="d-flex position-relative">
+                                                <div class="overflow-x-auto content-slider">
+                                                      <div class="d-flex gap-3 slide" style="width:max-content">
+                                                            <div class="">
+                                                                  <a href="./anime_playing_preview.html"><img src="./asset/kimetsu-v.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded"></a>
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Kimetsu No Yaiba</p>
+                                                            </div>
+                                                            <div class="">
+                                                                  <img src="./asset/naruto-v.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Naruto</p>
+                                                            </div>
+                                                            <div class="">
+                                                                  <img src="./asset/magia.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Magia</p>
+                                                            </div>
+                                                            <div class="">
+                                                                  <img src="./asset/zestiria.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Zestiria</p>
+                                                            </div>
+                                                            <div class="">
+                                                                  <img src="./asset/kaisen.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Kaisen</p>
+                                                            </div>
+                                                            <div class="">
+                                                                  <img src="./asset/giga.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Giga</p>
+                                                            </div>
+                                                      </div>
+                                                      
+                                                      
+                                                </div>
+                                                <!-- <div class="d-flex justify-content-between position-absolute col-12 gap-5" >
+                                                      <a class="nav-left bg-primary d-flex align-items-center" style="height: 350px;">
+                                                            <i class="bi bi-caret-left-fill text-white"></i>
+                                                      </a>
+                                                      <a class="nav-right bg-primary d-flex align-items-center" style="height: 350px;">
+                                                            <i class="bi bi-caret-right-fill text-white"></i>
+                                                      </a>
+                                                </div> -->
+                                          </div>
+                                          
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                          <hr style="border-top: 2px solid white">
+                                          <div class="col-12 my-3">
+                                                <div class="d-flex position-relative">
+                                                      <div class="overflow-x-auto content-slider">
+                                                            <div class="d-flex gap-3 slide" style="width:max-content">
+                                                                  <div class="position-relative d-flex align-items-end">
+                                                                        <img src="./asset/kimetsu-v.svg" alt="" style="height: 100px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                        <p class="text-white position-absolute m-3" style="font-weight: 800;">Adventure</p>
+                                                                        <p class="d-flex align-items-center justify-content-center p-3 rounded watch-now position-absolute top-0 end-0 m-2" style="width: 18px;height: 18px;background: var(--color-yellow);box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1);font-size: 16px;"><i class="bi bi-eye-fill"></i></p>
+                                                                  </div>
+                                                                  <div class="position-relative d-flex align-items-end">
+                                                                        <img src="./asset/naruto-v.svg" alt="" style="height: 100px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                        <p class="text-white position-absolute m-3" style="font-weight: 800;">Romance</p>
+                                                                        <p class="d-flex align-items-center justify-content-center p-3 rounded watch-now position-absolute top-0 end-0 m-2" style="width: 18px;height: 18px;background: var(--color-yellow);box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1);font-size: 16px;"><i class="bi bi-eye-fill"></i></p>
+                                                                  </div>
+                                                                  <div class="position-relative d-flex align-items-end">
+                                                                        <img src="./asset/magia.svg" alt="" style="height: 100px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                        <p class="text-white position-absolute m-3" style="font-weight: 800;">Action</p>
+                                                                        <p class="d-flex align-items-center justify-content-center p-3 rounded watch-now position-absolute top-0 end-0 m-2" style="width: 18px;height: 18px;background: var(--color-yellow);box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1);font-size: 16px;"><i class="bi bi-eye-fill"></i></p>
+                                                                  </div>
+                                                                  <div class="position-relative d-flex align-items-end">
+                                                                        <img src="./asset/zestiria.svg" alt="" style="height: 100px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                        <p class="text-white position-absolute m-3" style="font-weight: 800;">Comedy</p>
+                                                                        <p class="d-flex align-items-center justify-content-center p-3 rounded watch-now position-absolute top-0 end-0 m-2" style="width: 18px;height: 18px;background: var(--color-yellow);box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1);font-size: 16px;"><i class="bi bi-eye-fill"></i></p>
+                                                                  </div>
+                                                                  <div class="position-relative d-flex align-items-end">
+                                                                        <img src="./asset/kaisen.svg" alt="" style="height: 100px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                        <p class="text-white position-absolute m-3" style="font-weight: 800;">Horror</p>
+                                                                        <p class="d-flex align-items-center justify-content-center p-3 rounded watch-now position-absolute top-0 end-0 m-2" style="width: 18px;height: 18px;background: var(--color-yellow);box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1);font-size: 16px;"><i class="bi bi-eye-fill"></i></p>
+                                                                  </div>
+                                                                  <div class="position-relative d-flex align-items-end">
+                                                                        <img src="./asset/giga.svg" alt="" style="height: 100px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                        <p class="text-white position-absolute m-3" style="font-weight: 800;">Superhero</p>
+                                                                        <p class="d-flex align-items-center justify-content-center p-3 rounded watch-now position-absolute top-0 end-0 m-2" style="width: 18px;height: 18px;background: var(--color-yellow);box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1);font-size: 16px;"><i class="bi bi-eye-fill"></i></p>
+                                                                  </div>
+                                                            </div>
+                                                            
+                                                            
+                                                      </div>
+                                                      <!-- <div class="d-flex justify-content-between position-absolute col-12 gap-5" >
+                                                            <a class="nav-left bg-primary d-flex align-items-center" style="height: 350px;">
+                                                                  <i class="bi bi-caret-left-fill text-white"></i>
+                                                            </a>
+                                                            <a class="nav-right bg-primary d-flex align-items-center" style="height: 350px;">
+                                                                  <i class="bi bi-caret-right-fill text-white"></i>
+                                                            </a>
+                                                      </div> -->
+                                                </div>
+                                                
+                                          </div>
+                                    </div>
+                                    <div class="col-12">
+                                          <p class="text-white" style="font-weight: 700;font-size: 24px;">Recommended Anime</p>
+                                    </div>
+                                    <div class="col-12 my-3">
+                                          <div class="d-flex position-relative">
+                                                <div class="overflow-x-auto content-slider">
+                                                      <div class="d-flex gap-3 slide" style="width:max-content">
+                                                            <div class="">
+                                                                  <a href="./anime_playing_preview.html"><img src="./asset/kimetsu-v.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded"></a>
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Kimetsu No Yaiba</p>
+                                                            </div>
+                                                            <div class="">
+                                                                  <img src="./asset/naruto-v.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Naruto</p>
+                                                            </div>
+                                                            <div class="">
+                                                                  <img src="./asset/magia.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Magia</p>
+                                                            </div>
+                                                            <div class="">
+                                                                  <img src="./asset/zestiria.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Zestiria</p>
+                                                            </div>
+                                                            <div class="">
+                                                                  <img src="./asset/kaisen.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Kaisen</p>
+                                                            </div>
+                                                            <div class="">
+                                                                  <img src="./asset/giga.svg" alt="" style="height: 350px;width: 200px;object-fit: cover;" class="img-fluid rounded">
+                                                                  <p style="font-weight: 600;" class="text-white mt-2">Giga</p>
+                                                            </div>
+                                                      </div>
+                                                      
+                                                      
+                                                </div>
+                                                <!-- <div class="d-flex justify-content-between position-absolute col-12 gap-5" >
+                                                      <a class="nav-left bg-primary d-flex align-items-center" style="height: 350px;">
+                                                            <i class="bi bi-caret-left-fill text-white"></i>
+                                                      </a>
+                                                      <a class="nav-right bg-primary d-flex align-items-center" style="height: 350px;">
+                                                            <i class="bi bi-caret-right-fill text-white"></i>
+                                                      </a>
+                                                </div> -->
+                                          </div>
+                                          
+                                    </div>
+                                    
+                                    
+                              </div>
+                        </div>
+                  </section>
+            </main>
+            <footer class="py-5" style="background: var(--bg-blue-black);">
+                  <div class="container">
+                        <div class="row">
+                              <div class="col-8">
+                                    <div class="d-flex gap-5 mb-3">
+                                          <p class="text-white" style="font-weight: 600;">Footer Menu</p>
+                                          <p class="text-white" style="font-weight: 600;">Footer Menu</p>
+                                          <p class="text-white" style="font-weight: 600;">Footer Menu</p>
+                                          <p class="text-white" style="font-weight: 600;">Footer Menu</p>
+                                    </div>
+                                    <p class="text-white">© Copyright - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis dui eu nibh consequat venenatis. Morbi bibendum ut massa sed.</p>
+                              </div>
+                              <div class="col-3 d-flex justify-content-start">
+                                    <div class="ps-0 ps-sm-0 ps-lg-3">
+                                          <p class="text-white" style="font-weight: 600;">Contact with Us</p>
+                                          <div class="d-flex gap-2">
+                                                <img src="./asset/facebook.svg" alt="" class="img-fluid">
+                                                <img src="./asset/instagram.svg" alt="" class="img-fluid">
+                                          </div>
+                                    </div>
+                              </div>
+                              
+                        </div>
+                  </div>
+                  
+                  
+            </footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="crossorigin="anonymous"></script>
+            <script>
+                  
+                  $(document).ready(function () {
+
+                        $(window).scroll(function(){
+                              $('#section-nav').toggleClass("background-navbar-scroll",window.scrollY > 0);
+                              $('#dropdown-menu').addClass('d-none');
+                              
+                        });
+
+                        if($(window).scrollTop() == 0){
+                              $('#dropdown-menu').addClass('d-none');
+                        }
+
+                        $('#dropdown-toogle').click(function(){
+                              $('#dropdown-menu').toggle('show');
+                              $('#dropdown-menu').removeClass('d-none');
+                        });
+
+                        
+
+                  });
+            </script>
+      </body>
+</html>
